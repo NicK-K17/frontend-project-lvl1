@@ -1,5 +1,5 @@
-import getRandomNumber from "../getRandomNumber.js";
-import game from "../index.js";
+import getRandomNumber from '../getRandomNumber.js';
+import game from '../index.js';
 
 const progression = () => {
   const startNumber = Math.floor(Math.random() * 51);
@@ -11,14 +11,14 @@ const progression = () => {
   return progressionResult;
 };
 
-const description = "What number is missing in the progression?";
+const description = 'What number is missing in the progression?';
 
 const getGameData = () => {
   const progressionArray = progression();
   const missingNumber = getRandomNumber(0, 9);
   const correctAnswer = String(progressionArray[missingNumber]);
-  progressionArray[missingNumber] = "..";
-  const question = progressionArray.join(" ");
+  progressionArray[missingNumber] = '..';
+  const question = progressionArray.join(' ');
   return [question, correctAnswer];
 };
 

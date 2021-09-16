@@ -1,5 +1,5 @@
-import getRandomNumber from "../getRandomNumber.js";
-import game from "../index.js";
+import getRandomNumber from '../getRandomNumber.js';
+import game from '../index.js';
 
 const randomCalculated = (number1, number2, operator) => {
   switch (operator) {
@@ -14,7 +14,7 @@ const randomCalculated = (number1, number2, operator) => {
   }
 };
 
-const description = "What is the result of the expression?";
+const description = 'What is the result of the expression?';
 
 const getGameData = () => {
   const number1 = getRandomNumber(1, 100);

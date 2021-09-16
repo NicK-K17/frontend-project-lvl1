@@ -1,5 +1,5 @@
-import getRandomNumber from "../getRandomNumber.js";
-import game from "../index.js";
+import getRandomNumber from '../getRandomNumber.js';
+import game from '../index.js';
 
 const primeCheck = (num) => {
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
