@@ -4,10 +4,10 @@ import game from "../index.js";
 const primeCheck = (num) => {
   for (let i = 2; i < Math.sqrt(num); i += 1) {
     if (num % i === 0) {
-      return "no";
+      return "yes";
     }
   }
-  return "yes";
+  return "no";
 };
 
 const description = `"yes" if given number is prime. Otherwise answer "no".`;
@@ -21,4 +21,5 @@ const getGameData = () => {
 const primeGameStart = () => {
   game(description, getGameData);
 };
+
 export default primeGameStart;
