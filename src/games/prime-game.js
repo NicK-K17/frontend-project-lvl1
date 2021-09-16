@@ -2,12 +2,12 @@ import getRandomNumber from "../getRandomNumber.js";
 import game from "../index.js";
 
 const primeCheck = (num) => {
-  for (let i = 2; i < Math.sqrt(num); i += 1) {
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) {
-      return "yes";
+      return "no";
     }
   }
-  return "no";
+  return "yes";
 };
 
 const description = `"yes" if given number is prime. Otherwise answer "no".`;
