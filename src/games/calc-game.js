@@ -1,7 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
 import game from '../index.js';
 
-const randomCalculated = (number1, number2, operator) => {
+const calculate = (number1, number2, operator) => {
   switch (operator) {
     case '+':
       return String(number1 + number2);
@@ -20,9 +20,9 @@ const getGameData = () => {
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 100);
   const operations = ['+', '-', '*'];
-  const operator = operations[getRandomNumber(0, 2)];
+  const operator = operations[getRandomNumber(0, operations.length - 1)];
   const question = `${number1} ${operator} ${number2}`;
-  const correctAnswer = randomCalculated(number1, number2, operator);
+  const correctAnswer = calculate(number1, number2, operator);
   return [question, correctAnswer];
 };
 
