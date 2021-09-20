@@ -4,11 +4,11 @@ import game from '../index.js';
 const calculate = (number1, number2, operator) => {
   switch (operator) {
     case '+':
-      return String(number1 + number2);
+      return (number1 + number2);
     case '-':
-      return String(number1 - number2);
+      return (number1 - number2);
     case '*':
-      return String(number1 * number2);
+      return (number1 * number2);
     default:
       return null;
   }
@@ -22,7 +22,7 @@ const getGameData = () => {
   const operations = ['+', '-', '*'];
   const operator = operations[getRandomNumber(0, operations.length - 1)];
   const question = `${number1} ${operator} ${number2}`;
-  const correctAnswer = calculate(number1, number2, operator);
+  const correctAnswer = String(calculate(number1, number2, operator));
   return [question, correctAnswer];
 };
 

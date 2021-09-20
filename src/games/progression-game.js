@@ -12,8 +12,8 @@ const progression = (startNumber, stepProgression, elementsCount) => {
 const description = 'What number is missing in the progression?';
 
 const getGameData = () => {
-  const startNumber = Math.floor(Math.random() * 51);
-  const stepProgression = Math.floor(Math.random() * (11 - 2)) + 2;
+  const startNumber = getRandomNumber(0, 50);
+  const stepProgression = getRandomNumber(2, 10);
   const elementsCount = 10;
   const progressionArray = progression(startNumber, stepProgression, elementsCount);
   const missingNumber = getRandomNumber(0, 9);
